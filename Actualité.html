@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .navbar {
+            height: 12%;
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .logo {
+
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+
+
+        }
+
+        nav {
+
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li {
+
+
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13;
+
+        }
+
+        .row {
+            display: flex;
+            height: 88%;
+            align-items: center;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*Note: If you are using landscape images use 'background-size:auto 100%;' in .textOverImage and 'background-size:auto 110%;' in .textOverImage:hover*/
+
+        a {
+            text-decoration: none;
+        }
+
+        /*Add the following compatibility code for IE as you can't animate background-size in IE*/
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            .textOverImage {
+                background-size: cover !important;
+            }
+        }
+
+        .textOverImage {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 4px;
+            background-size: 100%;
+            background-position: center;
+            transition: 0.5s;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 0 4px #000;
+        }
+
+        .textOverImage:hover {
+            background-size: 110%;
+        }
+
+        .textOverImage:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(90%);
+            /*use transform:translateY(100%); to remove footer*/
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 0 8px;
+            content: attr(data-title);
+            transition: 0.5s 0.1s;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .textOverImage:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            padding: 8px;
+            content: attr(data-text);
+            transition: 0.5s;
+            padding-top: 2em;
+            margin-top: 8px;
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        .textOverImage:hover:after {
+            transform: translateY(0);
+            transition: 0.5s 0.1s;
+            opacity: 1;
+        }
+
+        .textOverImage:hover:before {
+            transform: translateY(0);
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+
+                <ul>
+
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="incontournable.html">Les lieu incontounables</a></li>
+                    <li><a href="Marché et foires.html">Matché et foire</a></li>
+                    <li><a href="Actualité.html">Actualité</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon">
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <a href="https://actu.fr/ile-de-france/paris_75056/videos-meteo-paris-forte-averse-grele-sur-capitale-previsions-la-semaine_29339765.html"
+            class="textOverImage"
+            data-title="VIDÉOS. Météo à Paris : forte averse de grêle sur la capitale, les prévisions pour la semaine">
+            <img src="" alt="">
+            <img src="images/parisnews.jpg" alt="">
+
+        </a>
+
+
+
+        <a href="https://actu.fr/ile-de-france/paris_75056/mineurs-isoles-a-paris-on-n-imagine-pas-un-seul-instant-ce-qui-nous-attend-en-france_35262618.html"
+            class="textOverImage"
+            data-title="Mineurs isolés à Paris : On nimagine pas un seul instant ce qui nous attend en France">
+            <img src="" alt="">
+            <img src="images/parisnews2.jpg" alt="">
+
+        </a>
+        <a href="https://www.bebasket.fr/championnat-pro-b/le-paris-basketball-annonce-la-signature-de-marquez-haynes.html"
+            class="textOverImage" data-title="LE PARIS BASKETBALL ANNONCE LA SIGNATURE DE MARQUEZ HAYNES">
+            <img src="" alt="">
+            <img src="images/parisnews3.jpg" alt="">
+
+        </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <a href="https://www.laprovence.com/article/papier/6329614/le-nouveau-visage-du-jt-de-13-h-de-france-2.html"
+            class="textOverImage" data-title=" Julian Bugier : le nouveau visage du JT de 13 h de France 2">
+            <img src="" alt="">
+            <img src="images/francenews.webp" alt="">
+
+        </a>
+
+
+
+        <a href="https://www.lejdc.fr/charite-sur-loire-58400/actualites/la-boutique-de-lhopital-henri-dunant-lieu-de-vie-essentiel-pour-beaucoup-de-personnes_13941178/"
+            class="textOverImage" data-title="La Charité-sur-Loire
+La boutique de l’hôpital Henri-Dunant, lieu de vie essentiel pour beaucoup de personnes">
+            <img src="" alt="">
+            <img src="images/lacharite.jpg" alt="">
+
+        </a>
+
+
+
+
+        <a href="https://www.laprovence.com/actu/en-direct/6329045/coronavirus-en-france-plus-de-5900-personnes-en-reanimation-449-personnes-decedees-ces-dernieres-24-h.htm"
+            class="textOverImage"
+            data-title="Coronavirus en France : plus de 5900 personnes en réanimation, 449 décès ces dernières 24 h">
+            <img src="" alt="">
+            <img src="images/corona.jpg" alt="">
+
+        </a>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

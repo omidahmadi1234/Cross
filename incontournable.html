@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    .navbar {
+      height: 12%;
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    .logo {
+
+      width: 50px;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      width: 30px;
+      cursor: pointer;
+      margin-left: 40px;
+
+
+    }
+
+    nav {
+
+      flex: 1;
+      text-align: right;
+    }
+
+    nav ul li {
+
+
+      list-style: none;
+      display: inline-block;
+      margin-left: 60px;
+
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 13;
+
+    }
+
+    .row {
+      display: flex;
+      height: 88%;
+      align-items: center;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*Note: If you are using landscape images use 'background-size:auto 100%;' in .textOverImage and 'background-size:auto 110%;' in .textOverImage:hover*/
+
+    a {
+      text-decoration: none;
+    }
+
+    /*Add the following compatibility code for IE as you can't animate background-size in IE*/
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+      .textOverImage {
+        background-size: cover !important;
+      }
+    }
+
+    .textOverImage {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      float: left;
+      margin: 4px;
+      background-size: 100%;
+      background-position: center;
+      transition: 0.5s;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 0 4px #000;
+    }
+
+    .textOverImage:hover {
+      background-size: 110%;
+    }
+
+    .textOverImage:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(90%);
+      /*use transform:translateY(100%); to remove footer*/
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      padding: 0 8px;
+      content: attr(data-title);
+      transition: 0.5s 0.1s;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .textOverImage:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #fff;
+      padding: 8 px;
+      content: attr(data-text);
+      transition: 0.5s;
+      padding-top: 2em;
+      margin-top: 8px;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    .textOverImage:hover:after {
+      transform: translateY(0);
+      transition: 0.5s 0.1s;
+      opacity: 1;
+    }
+
+    .textOverImage:hover:before {
+      transform: translateY(0);
+      padding: 8px;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+
+    <div class="navbar">
+      <img src="images/logo.png" class="logo">
+      <nav>
+
+        <ul>
+
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="incontournable.html">Les lieu incontounables</a></li>
+          <li><a href="Marché et foires.html">Matché et foire</a></li>
+          <li><a href="Actualité.html">Actualité</a></li>
+        </ul>
+      </nav>
+      <img src="images/menu.png" class="menu-icon">
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/la2.jpg)" data-title="Prieuré Notre-Dame "
+      data-text="Le petit monastère de Seyr (ancien nom du lieu), fondé au début du VIIIe siècle, avait traversé les siècles vaille que vaille jusqu'à ce qu'en 1052, des donations de terres effectuées par Geoffroy de Champallement, évêque d'Auxerre, au bénéfice de Cluny, ne déclenche un processus d'affiliation de l'établissement à la grande abbaye bourguignonne. En 1059, l'acte de fondation consacre l'essor du prieuré. Dès les années 1060, un édifice dont l'architecture s'inspire de celle de Cluny II est construit">
+    </a>
+
+
+
+
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/nevers.jpg)"
+      data-title="Le Palais ducal, lieu de vie et de culture à Nevers"
+      data-text="On vous propose de découvrir l’ancienne résidence des seigneurs de Nevers, souvent considérée comme l’un des premiers châteaux de la Loire… Suivez-nous au cœur de l’histoire du palais ducal de Nevers !">
+    </a>
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/neverse.jpg)"
+      data-title="Église Saint - Etienne"
+      data-text="Magnifique église romane un peu esseulée dans un état extraordinaire où les restaurations ne se remarquent pas. La pierre est splendide et l'architecture remarquable.">
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/neversee.jpg)"
+      data-title="Les jardins du château d’Ainay-le-Vieil"
+      data-text="Lors de votre escapade en Berry, arrêtez-vous au château d’Ainay-le-Vieil pour visiter ses magnifiques jardins labellisés Jardin remarquable !
+
+En famille ou en solo, venez flâner au milieu de sa roseraie exceptionnelle, composée de roses anciennes, rares ou en voie de disparition. Un véritable voyage au cœur de l’histoire de la reine des fleurs !
+
+Vous pourrez ensuite vous perdre au milieu des cinq chartreuses, des petites chambres abritant des jardins thématiques, pour vous initier à l’art des jardins...">
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/neversbar.jpg)"
+      data-title="Le bar de Nevers plage, un lieu incontournable pour se détendre" data-text="">
+    </a>
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/neversc.jpg)" data-title="Camping de Nevers"
+      data-text="Si vous recherchez un camping dans la Nièvre, le Camping de Nevers à Nevers est sans l'ombre d'un doute le bon. Niché au coeur de la Bourgogne (France), ce camping pourra vous ravir par sa localisation.Pour garantir votre confort, le camping inclut certains aménagements et services. On compte notamment une laverie et un accès au wifi parmi ces derniers, mais aussi un service de dépôt de pain. Avec une épicerie/supérette tout comme un snack directement sur les lieux, vous n'aurez pas à aller très loin pour vous nourrir.
+
+">
+    </a>
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/neverscc.jpg)" data-title="Prendre l'air au cœur du Morvan
+" data-text="Besoin de nature, d'espace et d'air frais ? On a la destination qu'il vous faut : le Parc naturel régional du Morvan !
+
+Ce territoire naturel mêlant forêts, lacs et montagnes est l'endroit idéal pour pratiquer la randonnée à pied, à cheval ou même à VTT : de nombreux itinéraires cyclotouristiques n'attendent que vous.
+
+À ne pas manquer : l'ascension jusqu'à la superbe basilique Sainte-Marie-Madeleine de Vézelay, la visite du musée et du site archéologique de Bibracte ou encore du château de Bazoches (qui ouvre ses portes le 2 juin">
+    </a>
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/efil.jpg)" data-title="La Tour Eiffel"
+      data-text="ymbole de Paris et globalement de toute la France, la Tour Eiffel est certainement le monument qui fait le plus rêver et saliver les touristes de passage dans la capitale. Inaugurée en 1889, la Tour imaginée et réalisée par le célèbre architecte Gustave Eiffel surplombe la ville de ses 324 mètres de hauteur. Illuminée de tout son long la nuit, elle se laisse admirer de jour comme de nuit. Des visites sont ouvertes tous les jours, trois ascenseurs fonctionnent et vous emmèneront jusqu’au sommet. Profitez-en pour faire un arrêt par le premier étage et son plancher de verre, vous trouverez au deuxième étage une boutique de souvenirs et un restaurant. Comptez environ 17€ pour effectuer l’ascension.
+Le Champ de Mars, pour sa part, s’étend de l’école militaire jusqu’à la Tour Eiffel, il est généralement pris d’assaut par les parisiens et les touristes qui y viennent s’y reposer, boire un verre ou encore pique-niquer.">
+    </a>
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/bbb.webp)" data-title="Le musée du Louvre"
+      data-text="e musée du Louvre, situé dans le premier arrondissement de Paris, est l’un des musées les plus grands du monde. Doté d’une surface de 60000 m², il est le troisième lieu touristique le plus fréquenté de France avec plus de neuf millions de visiteurs par an. Le musée est ouvert toute l’année sauf le Mardi et jours fériés, comptez environ 15€ pour avoir accès aux différentes salles. Visible de loin grâce à sa célèbre Pyramide de verre devant laquelle tous les touristes se prennent en photos, le musée du Louvre offre aux visiteurs près de 35000 œuvres d’art dont le magnifique et mondialement connu portrait de la Joconde de Léonard de Vinci.
+
+">
+    </a>
+
+
+
+
+    <a href="" class="textOverImage" style="background-image:url(images/vvv.jpg)" data-title="La Cathédrale Notre-Dame"
+      data-text="Autre monument incontournable de Paris : la Cathédrale Notre-Dame. Monument le plus visité de France, sa construction a débuté en 1163 et sera finalement achevée plus de cent ans plus tard. Véritable symbole de Paris, la Cathédrale fût endommagée pendant la révolution française et restaurée par la suite. Située sur l’île de la cité, ce monument accueille chaque année plus de quatorze millions de visiteurs.
+
+">
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
